@@ -1,0 +1,19 @@
+{
+  "name": "Yahoo-finance-stock-price",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "現在開いているYahooFinanceの株価ページから株価のみを抽出してバッジに表示します",
+  "browser_action" : {
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://stocks.finance.yahoo.co.jp/*"],
+      "js": ["jquery-2.2.4.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": [ "jquery-2.2.4.min.js", "background.js" ],
+    // recommended
+    "persistent": false
+  }
+}
